@@ -62,10 +62,10 @@ for Mashup in Mashups:
 	word_list=deccription.split() # 默认split按一个或多个空格分隔
 	Mashup_length=Mashup_length+len(word_list)
 Average_length_of_Mashup_description=Mashup_length/len(Mashups)
-print("Average_length_of_Mashup_description:%.4f" % Average_length_of_Mashup_description)
+print("Average_length_of_Mashup_description: %.4f" % Average_length_of_Mashup_description)
 
 sparsity=1-Number_of_invocations/(Number_of_Mashups*Number_of_called_APIs)
-print("Sparsity_of_Mashup-API_matrix:%.4f" % sparsity)
+print("Sparsity_of_Mashup-API_matrix: %.2f%%" % (sparsity*100))
 
 # 读取APIs.csv文件
 with open(API_file_path, 'r',encoding="utf-8",errors='ignore') as csvfile:
@@ -100,6 +100,6 @@ for API in APIs:
 	word_list=deccription.split() # 默认split按一个或多个空格分隔
 	API_length=API_length+len(word_list)
 Average_length_of_API_description=API_length/len(APIs)
-print("Average_length_of_API_description:%.4f" % Average_length_of_API_description)
+print("Average_length_of_API_description: %.4f" % Average_length_of_API_description)
 Called_proportion_of_APIs=Number_of_called_APIs/Number_of_APIs
-print("Called_proportion_of_APIs:%.4f" % Called_proportion_of_APIs)
+print("Called_proportion_of_APIs: %.2f%%" % (Called_proportion_of_APIs*100))
