@@ -1,4 +1,3 @@
-# NAFM
 
 ## 1. Characteristics of the dataset
 Item | Values 
@@ -17,3 +16,6 @@ Number of API tags | 473
 Average length of Mashup description | 27.63
 Average length of API description | 68.98
 Sparsity of Mashup-API matrix | 99.84%
+
+Run programme [dataset_characteristics.py](dataset_characteristics.py) to generate the above statistical data.
+
