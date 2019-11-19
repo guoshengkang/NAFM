@@ -20,15 +20,17 @@ Sparsity of Mashup-API matrix | 99.84%
 Run programme [dataset_characteristics.py](dataset_characteristics.py) to generate the above statistical data.
 
 ## 2. FM (Factorization Machines) based Models for Service (Web API) Recommendation
-### basicFM
-[S. Rendle, “Factorization Machines,” 2010 IEEE International Conference on Data Mining, 2010, pp. 995-1000.](references/2010_ICDM_Factorization_Machines.pdf)<div align=center><img width="400" height="200" src="neural_network_architechtures/basicFM.jpg"/>
+* **basicFM**
+  * [neural network architechture](neural_network_architechtures/basicFM.jpg)
+  * [S. Rendle, “Factorization Machines,” 2010 IEEE International Conference on Data Mining, 2010, pp. 995-1000.](references/2010_ICDM_Factorization_Machines.pdf)
 
-### DeepFM
-[H. Guo, R. Tang, Y. Ye, Z. Li, and X. He, “DeepFM: A Factorization-Machine based Neural Network for CTR Prediction,” International Joint Conference on Artificial Intelligence, 2017, pp. 1725-1731.](references/2017_IJCAI_DeepFM_a_factorization-machine_based_neural_network_for_CTR_prediction.pdf) <div align=center><img width="400" height="300" src="neural_network_architechtures/DeepFM.jpg"/>
+* **DeepFM**
+  * [neural network architechture](neural_network_architechtures/DeepFM.jpg)
+  * [H. Guo, R. Tang, Y. Ye, Z. Li, and X. He, “DeepFM: A Factorization-Machine based Neural Network for CTR Prediction,” International Joint Conference on Artificial Intelligence, 2017, pp. 1725-1731.](references/2017_IJCAI_DeepFM_a_factorization-machine_based_neural_network_for_CTR_prediction.pdf) <div align=center><img width="400" height="300" src="neural_network_architechtures/DeepFM.jpg"/>
 
-### AFM
-[J. Xiao, H. Ye, X. He, H. Zhang, F. Wu, and T.-S. Chua, “Attentional Factorization Machines: Learning the Weight of Feature Interactions via Attention Networks,” International Joint Conference on Artificial Intelligence, 2017, pp. 3119-3125.](references/2017_IJCAI_Attentional_factorization_machines_Learning_the_weight_of_feature_interactions_via_attention_networks.pdf)<div align=center><img width="400" height="300" src="neural_network_architechtures/AFM.jpg"/>
+* **AFM**
+  * [neural network architechture](neural_network_architechtures/AFM.jpg)
+  * [J. Xiao, H. Ye, X. He, H. Zhang, F. Wu, and T.-S. Chua, “Attentional Factorization Machines: Learning the Weight of Feature Interactions via Attention Networks,” International Joint Conference on Artificial Intelligence, 2017, pp. 3119-3125.](references/2017_IJCAI_Attentional_factorization_machines_Learning_the_weight_of_feature_interactions_via_attention_networks.pdf)
 
-## 2. NAFM: Neural and Attentional Factorization Machine for Service (Web API) Recommendation
-<div align=center><img width="400" height="400" src="neural_network_architechtures/NAFM.jpg"/>
-
+## 3. NAFM: Neural and Attentional Factorization Machine for Service (Web API) Recommendation
+[neural network architechture](neural_network_architechtures/NAFM.jpg)
