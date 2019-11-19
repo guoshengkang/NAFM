@@ -22,7 +22,7 @@ Run programme [dataset_characteristics.py](dataset_characteristics.py) to genera
 ## 2. FM (Factorization Machines) based Models for Service (Web API) Recommendation
 * **basicFM**
   * [S. Rendle, “Factorization Machines,” 2010 IEEE International Conference on Data Mining, 2010, pp. 995-1000.](references/2010_ICDM_Factorization_Machines.pdf)
-<div align=center><img width="400" height="300" src="neural_network_architechtures/basicFM.jpg"/>
+<div align=center><img width="300" height="150" src="neural_network_architechtures/basicFM.jpg"/>
 
 * **DeepFM**
   * [H. Guo, R. Tang, Y. Ye, Z. Li, and X. He, “DeepFM: A Factorization-Machine based Neural Network for CTR Prediction,” International Joint Conference on Artificial Intelligence, 2017, pp. 1725-1731.](references/2017_IJCAI_DeepFM_a_factorization-machine_based_neural_network_for_CTR_prediction.pdf)
