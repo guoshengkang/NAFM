@@ -26,7 +26,7 @@ Run programme [dataset_characteristics.py](dataset_characteristics.py) to genera
 
 * **DeepFM**
   * [neural network architechture](neural_network_architechtures/DeepFM.jpg)
-  * [H. Guo, R. Tang, Y. Ye, Z. Li, and X. He, “DeepFM: A Factorization-Machine based Neural Network for CTR Prediction,” International Joint Conference on Artificial Intelligence, 2017, pp. 1725-1731.](references/2017_IJCAI_DeepFM_a_factorization-machine_based_neural_network_for_CTR_prediction.pdf) <div align=center><img width="400" height="300" src="neural_network_architechtures/DeepFM.jpg"/>
+  * [H. Guo, R. Tang, Y. Ye, Z. Li, and X. He, “DeepFM: A Factorization-Machine based Neural Network for CTR Prediction,” International Joint Conference on Artificial Intelligence, 2017, pp. 1725-1731.](references/2017_IJCAI_DeepFM_a_factorization-machine_based_neural_network_for_CTR_prediction.pdf)
 
 * **AFM**
   * [neural network architechture](neural_network_architechtures/AFM.jpg)
@@ -34,3 +34,9 @@ Run programme [dataset_characteristics.py](dataset_characteristics.py) to genera
 
 ## 3. NAFM: Neural and Attentional Factorization Machine for Service (Web API) Recommendation
 [neural network architechture](neural_network_architechtures/NAFM.jpg)
+
+## 4. Neural Network Architechture 
+Models | Architechtures 
+ :- | :-
+basicFM | ![basicFM](neural_network_architechtures/basicFM.jpg)
+DeepFM | ![basicFM](neural_network_architechtures/DeepFM.jpg)
