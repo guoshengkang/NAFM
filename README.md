@@ -21,21 +21,22 @@ Run programme [dataset_characteristics.py](dataset_characteristics.py) to genera
 
 ## 2. Integrating FM Model with Deep Learning Models
 Model | Reference | Code 
- :-： | :- | :-：
+ :-: | :-: | :-:
 BasicFM | [S. Rendle, “Factorization Machines,” 2010 IEEE International Conference on Data Mining, 2010, pp. 995-1000.](references/2010_ICDM_Factorization_Machines.pdf) | 
-FNN | | 
-Wide&Deep | | 
-Deep&Cross | | 
+FNN | [W. Zhang, T. Du, and J. Wang, “Deep learning over multi-field categorical data,” European conference on information retrieval, 2016, pp. 45-57.](references/2016_ECIR_Deep_Learning_over_Multi-field_Categorical_Data_A_Case_Study_on_User_Response_Prediction.pdf) | [code](https://github.com/shenweichen/DeepCTR)
+Wide&Deep | [H.-T. Cheng, L. Koc, J. Harmsen, T. Shaked, T. Chandra, H. Aradhye, G. Anderson, G. Corrado, W. Chai, and M. Ispir, “Wide & deep learning for recommender systems,” the 1st workshop on deep learning for recommender systems, 2016, pp. 7-10.](references/2016_DLRS_Wide_&_Deep_Learning_for_Recommender_Systems.pdf) | [code](https://github.com/shenweichen/DeepCTR)
+Deep&Cross | [Y. Shan, T. R. Hoens, J. Jiao, H. Wang, D. Yu, and J. Mao, “Deep crossing: Web-scale modeling without manually crafted combinatorial features,” the 22nd ACM SIGKDD international conference on knowledge discovery and data mining, 2016, pp. 255-262.](references/2016_KDD_Deep_crossing_Web-scale_modeling_without_manually_crafted_combinatorial_features.pdf) | [code](https://github.com/shenweichen/DeepCTR)
 DeepFM |  [H. Guo, R. Tang, Y. Ye, Z. Li, and X. He, “DeepFM: A Factorization-Machine based Neural Network for CTR Prediction,” International Joint Conference on Artificial Intelligence, 2017, pp. 1725-1731.](references/2017_IJCAI_DeepFM_a_factorization-machine_based_neural_network_for_CTR_prediction.pdf) | [code](https://github.com/shenweichen/DeepCTR)
 NFM | [X. He, and T.-S. Chua, “Neural factorization machines for sparse predictive analytics,” International ACM SIGIR conference on Research and Development in Information Retrieval, 2017, pp. 355-364.](references/2017_SIGIR_Neural_Factorization_Machines_for_Sparse_Predictive_Analytics.pdf) | [code](https://github.com/hexiangnan/neural_factorization_machine)
 AFM | [J. Xiao, H. Ye, X. He, H. Zhang, F. Wu, and T.-S. Chua, “Attentional Factorization Machines: Learning the Weight of Feature Interactions via Attention Networks,” International Joint Conference on Artificial Intelligence, 2017, pp. 3119-3125.](references/2017_IJCAI_Attentional_factorization_machines_Learning_the_weight_of_feature_interactions_via_attention_networks.pdf) | [code](https://github.com/hexiangnan/attentional_factorization_machine)
 
-
+## 2. FM Model based Web API Recommendation
+* **basicFM**
   * B. Cao, B. Li, J. Liu, M. Tang, and Y. Liu, “Web APIs Recommendation for Mashup Development based on Hierarchical Dirichlet Process and Factorization Machines,” International Conference on Collaborative Computing: Networking, Applications and Worksharing, 2016, pp. 3-15.
   * M. M. Rahman, X. Liu, and B. Cao, “Web API Recommendation for Mashup Development Using Matrix Factorization on Integrated Content and Network-based Service Clustering,” 2017 IEEE International Conference on Services Computing (SCC), 2017, pp. 225-232.
   * B. Cao, B. Li, J. Liu, M. Tang, Y. Liu, and Y. Li, “Mobile Service Recommendation via Combining Enhanced Hierarchical Dirichlet Process and Factorization Machines,” Mobile Information Systems, vol. 2019, 2019.
 
-* **DeepFM**: [H. Guo, R. Tang, Y. Ye, Z. Li, and X. He, “DeepFM: A Factorization-Machine based Neural Network for CTR Prediction,” International Joint Conference on Artificial Intelligence, 2017, pp. 1725-1731.](references/2017_IJCAI_DeepFM_a_factorization-machine_based_neural_network_for_CTR_prediction.pdf)
+* **DeepFM**
   * X. Zhang, J. Liu, B. Cao, Q. Xiao, and Y. Wen, “Web Service Recommendation via Combining Doc2Vec-based Functionality Clustering and DeepFM-Based Score Prediction,” 2018 IEEE Intl Conf on Parallel & Distributed Processing with Applications, Ubiquitous Computing & Communications, Big Data & Cloud Computing, Social Computing & Networking, Sustainable Computing & Communications, 2018, pp. 509-516.
 
 * **AFM**: 
