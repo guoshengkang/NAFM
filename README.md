@@ -21,7 +21,7 @@ Run programme [dataset_characteristics.py](dataset_characteristics.py) to genera
 
 ## 2. Integrating FM Model with Deep Learning Models
 Model | Reference | Code 
- :-: | :-: | :-:
+ :- | :- | :-
 BasicFM | [S. Rendle, “Factorization Machines,” 2010 IEEE International Conference on Data Mining, 2010, pp. 995-1000.](references/2010_ICDM_Factorization_Machines.pdf) | 
 FNN | [W. Zhang, T. Du, and J. Wang, “Deep learning over multi-field categorical data,” European conference on information retrieval, 2016, pp. 45-57.](references/2016_ECIR_Deep_Learning_over_Multi-field_Categorical_Data_A_Case_Study_on_User_Response_Prediction.pdf) | [code](https://github.com/shenweichen/DeepCTR)
 Wide&Deep | [H.-T. Cheng, L. Koc, J. Harmsen, T. Shaked, T. Chandra, H. Aradhye, G. Anderson, G. Corrado, W. Chai, and M. Ispir, “Wide & deep learning for recommender systems,” the 1st workshop on deep learning for recommender systems, 2016, pp. 7-10.](references/2016_DLRS_Wide_&_Deep_Learning_for_Recommender_Systems.pdf) | [code](https://github.com/shenweichen/DeepCTR)
