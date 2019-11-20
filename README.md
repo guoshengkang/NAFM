@@ -30,7 +30,7 @@ DeepFM |  [H. Guo, R. Tang, Y. Ye, Z. Li, and X. He, “DeepFM: A Factorization-
 NFM | [X. He, and T.-S. Chua, “Neural factorization machines for sparse predictive analytics,” International ACM SIGIR conference on Research and Development in Information Retrieval, 2017, pp. 355-364.](references/2017_SIGIR_Neural_Factorization_Machines_for_Sparse_Predictive_Analytics.pdf) | [code](https://github.com/hexiangnan/neural_factorization_machine)
 AFM | [J. Xiao, H. Ye, X. He, H. Zhang, F. Wu, and T.-S. Chua, “Attentional Factorization Machines: Learning the Weight of Feature Interactions via Attention Networks,” International Joint Conference on Artificial Intelligence, 2017, pp. 3119-3125.](references/2017_IJCAI_Attentional_factorization_machines_Learning_the_weight_of_feature_interactions_via_attention_networks.pdf) | [code](https://github.com/hexiangnan/attentional_factorization_machine)
 
-## 3. FM Model based Application Web API Recommendation
+## 3. FM Model based Applications for Web API Recommendation
 * **basicFM**
   * B. Cao, B. Li, J. Liu, M. Tang, and Y. Liu, “Web APIs Recommendation for Mashup Development based on Hierarchical Dirichlet Process and Factorization Machines,” International Conference on Collaborative Computing: Networking, Applications and Worksharing, 2016, pp. 3-15.
   * M. M. Rahman, X. Liu, and B. Cao, “Web API Recommendation for Mashup Development Using Matrix Factorization on Integrated Content and Network-based Service Clustering,” 2017 IEEE International Conference on Services Computing (SCC), 2017, pp. 225-232.
@@ -45,7 +45,7 @@ AFM | [J. Xiao, H. Ye, X. He, H. Zhang, F. Wu, and T.-S. Chua, “Attentional Fa
 ## 4. NAFM: Neural and Attentional Factorization Machine for Web API Recommendation
 * **To be added**
 
-## 5. Neural Network Architechtures for FM based Models
+## 5. Neural Network Architechtures for FM based Models in Web API Recommendation
 Models | Architechtures 
  :- | :-:
 **basicFM** | ![basicFM](neural_network_architechtures/basicFM.jpg)
