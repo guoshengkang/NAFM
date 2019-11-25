@@ -8,7 +8,7 @@ Number of invocations | 13107
 Average number of invocations per Mashup | 2.11
 Number of called APIs | 940
 Called proportion of APIs | 7.28%
-NUmber of interactions |  9297
+Number of interactions |  9297
 Number of labeled Mashup tags | 18601
 Number of Mashup tags | 403
 Number of labeled API tags | 44891
@@ -56,7 +56,7 @@ Models | Architechtures
 
 ### 5.2 Comparison of FM based models for Web API recommendation
 | Model | Order-1 Features  | Order-2 Features  | High-order Feature Interactions  | Discriminate the Importance of Feature Interactions  | High-order Input  |
-| :--: | :--: | :--: | :--: | :--: | :--: |
+| :-- | :--: | :--: | :--: | :--: | :--: |
 | **basicFM**  | √  | √  | ×  | ×  | None  |
 | **DeepFM**  | √  | √  | √  | ×  | Embedding Vectors  |
 | **AFM**  | √  | √  | ×  | √  | Order-2 Feature Interactions  |
