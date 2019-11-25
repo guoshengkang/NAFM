@@ -46,9 +46,19 @@ AFM | [J. Xiao, H. Ye, X. He, H. Zhang, F. Wu, and T.-S. Chua, “Attentional Fa
 * **To be added**
 
 ## 5. Neural Network Architechtures for FM based Models in Web API Recommendation
+### 5.1 Architechtures
 Models | Architechtures 
  :- | :-:
 **basicFM** | ![basicFM](neural_network_architechtures/basicFM.jpg)
 **DeepFM** | ![basicFM](neural_network_architechtures/DeepFM.jpg)
 **AFM** | ![basicFM](neural_network_architechtures/AFM.jpg)
 **NAFM** | ![basicFM](neural_network_architechtures/NAFM.jpg)
+
+### 5.2 Comparison of FM based models for Web API recommendation
+| Model | Order-1 Features  | Order-2 Features  | High-order Feature Interactions  | High-order Input  | Discriminate the Importance of Feature Interactions  |
+| :--: | :--: | :--: | :--: | :--: | :--: |
+| basicFM  | √  | √  | ×  | None  | ×  |
+| DeepFM  | √  | √  | √  | Embedding Vectors  | ×  |
+| AFM  | √  | √  | ×  | Order-2 Feature Interactions  | √  |
+| NAFM  | √  | √  | √  | Order-2 Feature Interactions | √  |
+
