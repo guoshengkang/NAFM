@@ -5,6 +5,7 @@ To use NAFM, you have to do the following steps:
 2. put this file to the directory: DeepCTR\deepctr\models
 3. add NAFM model to the file: DeepCTR\deepctr\models\__init__.py
 4. after doing the above 3 steps, you can use any complex model with model.fit()and model.predict()
+you can refer to some examples on how to use models in DeepCTR package from the website: https://deepctr-doc.readthedocs.io/en/latest/Examples.html#
 """
 import tensorflow as tf
 from itertools import chain
@@ -16,21 +17,25 @@ from ..layers.utils import concat_func, add_func
 
 
 def NAFM(linear_feature_columns, dnn_feature_columns, dnn_hidden_units=(128, 128), fm_group=DEFAULT_GROUP_NAME, use_attention=True, attention_factor=8,
-        l2_reg_linear=1e-5, l2_reg_embedding=1e-5, l2_reg_dnn=1e-5, l2_reg_att=1e-5, afm_dropout=0, init_std=0.0001, seed=1024, bi_dropout=0,
-        dnn_dropout=0, dnn_activation='relu', task='binary'):
+        l2_reg_linear=1e-5, l2_reg_embedding=1e-5, l2_reg_dnn=1e-5, l2_reg_att=1e-5, bi_dropout=0, dnn_dropout=0, afm_dropout=0,
+        init_std=0.0001, seed=1024,  dnn_activation='relu', task='binary'):
     """Instantiates the Attentional Factorization Machine architecture.
-
     :param linear_feature_columns: An iterable containing all the features used by linear part of the model.
     :param dnn_feature_columns: An iterable containing all the features used by deep part of the model.
+    :param dnn_hidden_units: list,list of positive integer or empty list, the layer number and units in each layer of deep net
     :param fm_group: list, group_name of features that will be used to do feature interactions.
     :param use_attention: bool,whether use attention or not,if set to ``False``.it is the same as **standard Factorization Machine**
     :param attention_factor: positive integer,units in attention net
     :param l2_reg_linear: float. L2 regularizer strength applied to linear part
     :param l2_reg_embedding: float. L2 regularizer strength applied to embedding vector
+    :param l2_reg_dnn: float . L2 regularizer strength applied to DNN
     :param l2_reg_att: float. L2 regularizer strength applied to attention net
+    :param biout_dropout: When not ``None``, the probability we will drop out the output of BiInteractionPooling Layer.
+    :param dnn_dropout: float in [0,1), the probability we will drop out a given DNN coordinate.
     :param afm_dropout: float in [0,1), Fraction of the attention net output units to dropout.
     :param init_std: float,to use as the initialize std of embedding vector
     :param seed: integer ,to use as random seed.
+    :param dnn_activation: Activation function to use in deep net
     :param task: str, ``"binary"`` for  binary logloss or  ``"regression"`` for regression loss
     :return: A Keras model instance.
     """
