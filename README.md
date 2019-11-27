@@ -15,7 +15,8 @@ Number of labeled API tags | 44891
 Number of API tags | 473
 Average length of Mashup description | 27.63
 Average length of API description | 68.98
-Sparsity of Mashup-API matrix | 99.84%
+Number of Mashups with included APIs | 5341
+Sparsity of Mashup-API matrix | 99.81%
 
 Run programme [dataset_characteristics.py](dataset_characteristics.py) to generate the above statistical data.
 
@@ -43,7 +44,7 @@ Model | Reference | Code
   * Y. Cao, J. Liu, M. Shi, B. Cao, T. Chen, and Y. Wen, “Service Recommendation Based on Attentional Factorization Machine,” International Conference on Services Computing, Year, pp. 189-196.
 
 ## 4. NAFM: Neural and Attentional Factorization Machine for Web API Recommendation
-The state-of-the-art models for Web API recommendation, they either model factorized interactions with the same weight or neglect the the non-linear and complex inherent structure of real-world data. In real-world applications, different predictor variables usually have different predictive power, and not all features contain useful signal for estimating the target. Moreover, complex and non-linear structure are usually underlied in real-world data. Therefore, we propose a hybrid factorization machine model with a novel neural network architecture named NAFM by integrating neural network (i.e., neural component) to capture the non-linear feature interactions and attention network (i.e., attention component) to capture the different importance of feature interactions.
+The state-of-the-art models for Web API recommendation, they either model factorized interactions with the same weight or neglect the the non-linear and complex inherent structure of real-world data. In real-world applications, different predictor variables usually have different predictive power, and not all features contain useful signal for estimating the target. Moreover, complex and non-linear structure are usually underlied in real-world data. Therefore, we propose a hybrid factorization machine model with a novel neural network architecture named NAFM by integrating neural network (i.e., neural component) to capture the non-linear feature interactions and attention network (i.e., attention component) to capture the different importance of feature interactions. [code](nafm.py)
 
 ## 5. Neural Network Architechtures and Comparison for FM based Models in Web API Recommendation
 ### 5.1 Neural network architechtures for FM based Models in Web API recommendation
@@ -55,7 +56,7 @@ Models | Architechtures
 **NAFM** | ![basicFM](neural_network_architechtures/NAFM.jpg)
 
 ### 5.2 Comparison of FM based models for Web API recommendation
-| Model | Order-1 Features  | Order-2 Features  | High-order Feature Interactions  | Discriminate the Importance of Feature Interactions  | High-order Input  |
+| Model | Order-1 Features  | Order-2 Features  | High-order Feature Interactions  | Discriminate the Importance of Order-2 Feature Interactions  | High-order Input  |
 | :-- | :--: | :--: | :--: | :--: | :--: |
 | **basicFM**  | √  | √  | ×  | ×  | None  |
 | **DeepFM**  | √  | √  | √  | ×  | Embedding Vectors  |
