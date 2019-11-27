@@ -1,13 +1,6 @@
 # -*- coding:utf-8 -*-
 """
 
-Author:
-    Weichen Shen,wcshen1994@163.com
-
-Reference:
-    [1] Xiao J, Ye H, He X, et al. Attentional factorization machines: Learning the weight of feature interactions via attention networks[J]. arXiv preprint arXiv:1708.04617, 2017.
-    (https://arxiv.org/abs/1708.04617)
-
 """
 import tensorflow as tf
 from itertools import chain
