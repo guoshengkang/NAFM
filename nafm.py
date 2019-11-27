@@ -1,6 +1,10 @@
 # -*- coding:utf-8 -*-
 """
-
+To use NAFM, you have to do the following steps:
+1. download the deepctr package from https://github.com/shenweichen/DeepCTR first
+2. put this file to the directory: DeepCTR\deepctr\models
+3. add NAFM model to the file: DeepCTR\deepctr\models\__init__.py
+4. after doing the above 3 steps, you can use any complex model with model.fit()and model.predict()
 """
 import tensorflow as tf
 from itertools import chain
