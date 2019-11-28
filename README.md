@@ -17,6 +17,8 @@ Average length of Mashup description | 27.63
 Average length of API description | 68.98
 Number of Mashups with included APIs | 5341
 Sparsity of Mashup-API matrix | 99.81%
+Number of categories | 427
+Number of sub-categories | 12503
 
 Run programme [dataset_characteristics.py](dataset_characteristics.py) to generate the above statistical data.
 

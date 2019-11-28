@@ -19,7 +19,7 @@ def English_sentence_cut(input_string):
 	input:英文文本
 	output:英文单词的分词
 	"""
-	input_string=input_string.upper() #将字母统一换成大写
+	input_string=input_string.lower() #将字母统一换成小写
 	for char in string.punctuation: # 将标点符号替换为空格
 		input_string=input_string.replace(char, " ")
 	split_list=input_string.split() # 默认split按一个或多个空格分隔
@@ -47,6 +47,8 @@ with open(Mashup_file_path, 'r',encoding="utf-8",errors='ignore') as csvfile:
 					Labeled_tags=row[index].split("###")
 					Mashup_dict[field]=Labeled_tags
 					Mashup_tags.extend(Labeled_tags)
+				elif field=="desc":
+					Mashup_dict[field]=English_sentence_cut(input_string=row[index])
 				else:
 					Mashup_dict[field]=row[index]
 		Mashups.append(Mashup_dict)
@@ -68,6 +70,8 @@ with open(API_file_path, 'r',encoding="utf-8",errors='ignore') as csvfile:
 					Labeled_tags=row[index].split("###")
 					API_dict[field]=Labeled_tags
 					API_tags.extend(Labeled_tags)
+				elif field=="desc":
+					API_dict[field]=English_sentence_cut(input_string=row[index])
 				else:
 					API_dict[field]=row[index]
 		APIs.append(API_dict)
@@ -89,22 +93,33 @@ for invocation in invocations:
 		interactions.append(invocation)
 Number_of_called_APIs=len(set(interactions)) # 被调用的Web API数量
 Called_proportion_of_APIs=Number_of_called_APIs/Number_of_APIs # 被调用API的比例
-NUmber_of_interactions=len(interactions) # Mashup与包含的API之间的调用次数
+Number_of_interactions=len(interactions) # Mashup与包含的API之间的调用次数
 Number_of_labeled_Mashup_tags=len(Mashup_tags) # Mashup中包含的Tag数量
 Number_of_Mashup_tags=len(set(Mashup_tags)) # 被使用的Mashup Tag数量
 Number_of_labeled_API_tags=len(API_tags) # API中包含的Tag数量
 Number_of_API_tags=len(set(API_tags)) # 被使用的API Tag数量
+
 Mashup_length=0
 for Mashup in Mashups:
-	description=Mashup["desc"]
-	Mashup_length=Mashup_length+len(English_sentence_cut(input_string=description))
+	Mashup_length=Mashup_length+len(Mashup["desc"])
 Average_length_of_Mashup_description=Mashup_length/len(Mashups) # Mashup的平均描述长度
 API_length=0
 for API in APIs:
-	description=API["desc"]
-	API_length=API_length+len(English_sentence_cut(input_string=description))
+	API_length=API_length+len(API["desc"])
 Average_length_of_API_description=API_length/len(APIs) # API的平均描述长度
-sparsity=1-NUmber_of_interactions/(Number_of_Mashups*Number_of_called_APIs) # Mashup-API矩阵的稀疏度
+
+#如果Mashup调用的API不在数据集中,则矩阵中将其去掉
+Number_of_Mashups_with_included_APIs=0
+for Mashup in Mashups:
+	MemberAPIs=Mashup["MemberAPIs"]
+	Flag=0
+	for API in MemberAPIs:
+		if API in APINames:
+			Flag=1
+			Number_of_Mashups_with_included_APIs=Number_of_Mashups_with_included_APIs+1
+			break	
+
+sparsity=1-Number_of_interactions/(Number_of_Mashups_with_included_APIs*Number_of_called_APIs) # Mashup-API矩阵的稀疏度
 
 # 统计数据输出
 print("Number of Mashups:",Number_of_Mashups)
@@ -113,11 +128,12 @@ print("Number of invocations:",Number_of_invocations)
 print("Average number of invocations per Mashup: %.2f" % Average_number_of_invocations_per_Mashup)
 print("Number of called APIs:",Number_of_called_APIs)
 print("Called proportion of APIs: %.2f%%" % (Called_proportion_of_APIs*100))
-print("NUmber of interactions: ",NUmber_of_interactions)
+print("NUmber of interactions: ",Number_of_interactions)
 print("Number of labeled Mashup tags:",Number_of_labeled_Mashup_tags)
 print("Number of Mashup tags:",Number_of_Mashup_tags)
 print("Number of labeled API tags:",Number_of_labeled_API_tags)
 print("Number of API tags:",Number_of_API_tags)
 print("Average length of Mashup description: %.2f" % Average_length_of_Mashup_description)
 print("Average length of API description: %.2f" % Average_length_of_API_description)
+print("Number of Mashups with included APIs:",Number_of_Mashups_with_included_APIs)
 print("Sparsity of Mashup-API matrix: %.2f%%" % (sparsity*100))
