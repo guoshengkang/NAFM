@@ -47,8 +47,6 @@ with open(Mashup_file_path, 'r',encoding="utf-8",errors='ignore') as csvfile:
 					Labeled_tags=row[index].split("###")
 					Mashup_dict[field]=Labeled_tags
 					Mashup_tags.extend(Labeled_tags)
-				elif field=="desc":
-					Mashup_dict[field]=English_sentence_cut(input_string=row[index])
 				else:
 					Mashup_dict[field]=row[index]
 		Mashups.append(Mashup_dict)
@@ -70,8 +68,6 @@ with open(API_file_path, 'r',encoding="utf-8",errors='ignore') as csvfile:
 					Labeled_tags=row[index].split("###")
 					API_dict[field]=Labeled_tags
 					API_tags.extend(Labeled_tags)
-				elif field=="desc":
-					API_dict[field]=English_sentence_cut(input_string=row[index])
 				else:
 					API_dict[field]=row[index]
 		APIs.append(API_dict)
@@ -101,11 +97,11 @@ Number_of_API_tags=len(set(API_tags)) # 被使用的API Tag数量
 
 Mashup_length=0
 for Mashup in Mashups:
-	Mashup_length=Mashup_length+len(Mashup["desc"])
+	Mashup_length=Mashup_length+len(English_sentence_cut(input_string=Mashup["desc"]))
 Average_length_of_Mashup_description=Mashup_length/len(Mashups) # Mashup的平均描述长度
 API_length=0
 for API in APIs:
-	API_length=API_length+len(API["desc"])
+	API_length=API_length+len(English_sentence_cut(input_string=API["desc"]))
 Average_length_of_API_description=API_length/len(APIs) # API的平均描述长度
 
 #如果Mashup调用的API不在数据集中,则矩阵中将其去掉
