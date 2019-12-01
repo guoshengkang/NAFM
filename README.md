@@ -57,11 +57,11 @@ The state-of-the-art models for Web API recommendation, they either model factor
   * **Code**: [get_input_data.py](get_input_data.py)
   * **Input**: doc2vec.model, samples.pickle
   * **Output**: [input_data.csv](input_data.csv)
- * **Step3**: Split the input data into two parts with 80% trainging data and 20% testing data
+* **Step3**: Split the input data into two parts with 80% trainging data and 20% testing data
   * **Code**: [process_input_data.py](process_input_data.py)
   * **Input**: [input_data.csv](input_data.csv)
   * **Output**: input_data.pickle
-* **Step3**: Parameter optimization
+* **Step4**: Parameter optimization
   * **Code**: [parameter_optimization.py](parameter_optimization.py)
   * **Input**: input_data.pickle
   * **Output**: print the defaulf best parameter values
