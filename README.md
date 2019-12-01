@@ -47,29 +47,29 @@ Model | Reference | Code
 
 ## 4. NAFM: Neural and Attentional Factorization Machine for Web API Recommendation
 ### 4.1 Motivation
-The state-of-the-art models for Web API recommendation, they either model factorized interactions with the same weight or neglect the the non-linear and complex inherent structure of real-world data. In real-world applications, different predictor variables usually have different predictive power, and not all features contain useful signal for estimating the target. Moreover, complex and non-linear structure are usually underlied in real-world data. Therefore, we propose a hybrid factorization machine model with a novel neural network architecture named NAFM by integrating neural network (i.e., neural component) to capture the non-linear feature interactions and attention network (i.e., attention component) to capture the different importance of feature interactions. [code](nafm.py)
+The state-of-the-art models for Web API recommendation, they either model factorized interactions with the same weight or neglect the the non-linear and complex inherent structure of real-world data. In real-world applications, different predictor variables usually have different predictive power, and not all features contain useful signal for estimating the target. Moreover, complex and non-linear structure are usually underlied in real-world data. Therefore, we propose a hybrid factorization machine model with a novel neural network architecture named NAFM by integrating neural network (i.e., neural component) to capture the non-linear feature interactions and attention network (i.e., attention component) to capture the different importance of feature interactions. [NAFM code](nafm.py)
 ### 4.2 Data preprocessing
 * Step1: Train Doc2Vec model with all Mashup and API description information, and selected 100 most popular APIs and the associated 1993 Mashups as our experimental data
-  * Code: <get_samples.py>
+  * Code: [get_samples.py](get_samples.py)
   * Input: [the raw dataset](dataset)
   * Output: doc2vec.model, samples.pickle
 * Step2: Process the experimental data and transform them into input data for models
-  * Code: <get_input_data.py>
+  * Code: [get_input_data.py](get_input_data.py)
   * Input: doc2vec.model, samples.pickle
-  * Output: <input_data.csv>
+  * Output: [input_data.csv](input_data.csv)
  * Step3: Split the input data into two parts with 80% trainging data and 20% testing data
-  * Code: <process_input_data.py>
-  * Input: <input_data.csv>
+  * Code: [process_input_data.py](process_input_data.py)
+  * Input: [input_data.csv](input_data.csv)
   * Output: input_data.pickle
 * Step3: Parameter optimization
-  * Code: <parameter_optimization.py>
+  * Code: [parameter_optimization.py](parameter_optimization.py)
   * Input: input_data.pickle
   * Output: print the defaulf best parameter values
 ### 4.3 Evaluation
 * Performance comparison
-  * Code: <run_input_data.py>
-  * Input: <input_data.csv>
-  * Output: <evaluation_results.csv>
+  * Code: [run_input_data.py](run_input_data.py)
+  * Input: [input_data.csv](input_data.csv)
+  * Output: [evaluation_results.csv](evaluation_results.csv)
 * Impact of parameters
   * Code:
   * Input: 
