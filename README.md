@@ -72,9 +72,13 @@ The state-of-the-art models for Web API recommendation, they either model factor
   * **Input**: [input_data.csv](input_data.csv)
   * **Output**: [evaluation_results.csv](evaluation_results.csv)
 * **Impact of parameters**
-  * **Code**:
-  * **Input**: 
-  * **Output**: 
+  * **Code**: [impact_of_parameters.py](impact_of_parameters.py)
+  * **Input**: input_data.pickle
+  * **Output**: [Logloss_impact_of_parameters.csv](Logloss_impact_of_parameters.csv), [AUC_impact_of_parameters.csv](AUC_impact_of_parameters.csv)
+* **Plot figures for impact of parameters**
+  * **Code**: [plot_impact_of_parameters.py](plot_impact_of_parameters.py)
+  * **Input**: [Logloss_impact_of_parameters.csv](Logloss_impact_of_parameters.csv), [AUC_impact_of_parameters.csv](AUC_impact_of_parameters.csv)
+  * **Output**: [impact_of_parameters.png](impact_of_parameters.png)
 
 ## 5. Neural Network Architechtures and Comparison for FM based Models in Web API Recommendation
 ### 5.1 Neural network architechtures for FM based Models in Web API recommendation
