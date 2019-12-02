@@ -95,13 +95,18 @@ Number_of_Mashup_tags=len(set(Mashup_tags)) # 被使用的Mashup Tag数量
 Number_of_labeled_API_tags=len(API_tags) # API中包含的Tag数量
 Number_of_API_tags=len(set(API_tags)) # 被使用的API Tag数量
 
+Mashup_categories=[]
 Mashup_length=0
 for Mashup in Mashups:
 	Mashup_length=Mashup_length+len(English_sentence_cut(input_string=Mashup["desc"]))
+	Mashup_categories.append(Mashup["primary_category"])
 Average_length_of_Mashup_description=Mashup_length/len(Mashups) # Mashup的平均描述长度
+
+API_categories=[]
 API_length=0
 for API in APIs:
 	API_length=API_length+len(English_sentence_cut(input_string=API["desc"]))
+	API_categories.append(API["primary_category"])
 Average_length_of_API_description=API_length/len(APIs) # API的平均描述长度
 
 #如果Mashup调用的API不在数据集中,则矩阵中将其去掉
@@ -133,3 +138,6 @@ print("Average length of Mashup description: %.2f" % Average_length_of_Mashup_de
 print("Average length of API description: %.2f" % Average_length_of_API_description)
 print("Number of Mashups with included APIs:",Number_of_Mashups_with_included_APIs)
 print("Sparsity of Mashup-API matrix: %.2f%%" % (sparsity*100))
+print("Number of API category:",len(set(API_categories)))
+print("Number of Mashup category:",len(set(Mashup_categories)))
+print("Number of API/Mashup category:",len(set(API_categories) | set(Mashup_categories)))
