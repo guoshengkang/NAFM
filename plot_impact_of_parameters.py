@@ -88,5 +88,5 @@ plt.xticks(range(7),["0.1","0.2","0.3","0.4","0.5","0.6","0.7"])
 plt.grid(linestyle='-.')
 
 plt.tight_layout() #设置默认的间距
-plt.savefig('impact_of_parameters.png', dpi=1000) #指定分辨率保存
+plt.savefig('impact_of_parameters.png', dpi=200) #指定分辨率保存
 plt.show()
