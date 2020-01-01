@@ -94,6 +94,6 @@ Models | Architechtures
 | :-- | :--: | :--: | :--: | :--: | :--: |
 | **basicFM**  | √  | √  | ×  | ×  | None  |
 | **DeepFM**  | √  | √  | √  | ×  | Embedding Vectors  |
-| **AFM**  | √  | √  | ×  | √  | Order-2 Feature Interactions  |
+| **AFM**  | √  | √  | ×  | √  | None  |
 | **NAFM**  | √  | √  | √  | √ | Order-2 Feature Interactions  |
 
