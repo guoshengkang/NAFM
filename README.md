@@ -1,5 +1,5 @@
 This repository is the Python implementation with tensorflow 1.4.0 for the ICWS 2020 accepted paper:
-> Guosheng Kang, Jianxun Liu, Buqing Cao, Manliang Cao. "NAFM: Neural and Attentional Factorization Machine for Web API Recommendation". IEEE International Conference on Web Services. 2020, pp. \*\*-\*\*.
+> Guosheng Kang, Jianxun Liu, Buqing Cao, Manliang Cao. "NAFM: Neural and Attentional Factorization Machine for Web API Recommendation". IEEE International Conference on Web Services. 2020, pp. 330-337.
 
 ## 1. Characteristics of the dataset
 Item | Values 
