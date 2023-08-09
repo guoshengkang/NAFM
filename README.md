@@ -4,7 +4,7 @@ This repository is the Python implementation with tensorflow 1.4.0 for the ICWS 
 ## 1. Characteristics of the dataset
 Item | Values 
  :- | :-
-umber of Mashups | 6206
+Number of Mashups | 6206
 Number of APIs | 12919
 Number of invocations | 13107
 Average number of invocations per Mashup | 2.11
